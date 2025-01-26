@@ -8,17 +8,17 @@ Original file is located at
 """
 
 import streamlit as st
-import datetime
+import random
 
 st.set_page_config(layout="wide")
 st.title('Test Streamlit')
 
-result1 = st.button("click me1!")
-if result1:
-    st.write('you click on 1')
+col1_1, col1_2 = st.columns(2)
+with col1_1:
+    st.header("AAAAAA")
+with col1_2:
+    st.header("BBBBBB")
 
-result2 = st.button("click me2!", type="tertiary")
-if result1 & result2:
-    st.write('you click both')
-
-st.button("Reset", type="primary")
+col2_1, col2_2 = st.columns([3, 1], border=True)
+col2_1.header("CCCCCC")
+col2_2.header("DDDDDD")
