@@ -8,11 +8,17 @@ Original file is located at
 """
 
 import streamlit as st
-import random
+import datetime
 
+st.set_page_config(layout="wide")
 st.title('Test Streamlit')
-st.write('Hello Guest!')
 
-if st.button('Generate Random Number'):
-    random_number = random.randint(1, 100)
-    st.write(f'Random Number: {random_number}')
+result1 = st.button("click me1!")
+if result1:
+    st.write('you click on 1')
+
+result2 = st.button("click me2!", type="tertiary")
+if result1 & result2:
+    st.write('you click both')
+
+st.button("Reset", type="primary")
